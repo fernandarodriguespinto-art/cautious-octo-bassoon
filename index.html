@@ -1,1 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agro Forte - Futuro Sustentável</title>
 
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#f4f4f4;
+    color:#333;
+}
+
+header{
+    background: linear-gradient(to right, #1B5E20, #4CAF50);
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#2E7D32;
+    text-align:center;
+    padding:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#FBC02D;
+}
+
+section{
+    padding:40px;
+    text-align:center;
+}
+
+.hero{
+    background-image:url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:48px;
+}
+
+.card{
+    background:white;
+    margin:20px auto;
+    padding:20px;
+    max-width:800px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+button{
+    background:#FBC02D;
+    border:none;
+    padding:10px 20px;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{
+    background:#FFA000;
+}
+
+input{
+    padding:10px;
+    width:80%;
+    max-width:400px;
+    margin:10px;
+}
+
+footer{
+    background:#1B5E20;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌱 Agro Forte</h1>
+    <p>Futuro Sustentável: Equilíbrio entre Produção e Meio Ambiente</p>
+</header>
+
+<nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#tecnologia">Tecnologia</a>
+    <a href="#sustentabilidade">Sustentabilidade</a>
+    <a href="#ia">IA Interativa</a>
+</nav>
+
+<section class="hero">
+    <h1>Produzir Mais, Preservar Sempre</h1>
+    <p>O Agro Forte une tecnologia, inovação e respeito ao meio ambiente.</p>
+</section>
+
+<section id="sobre">
+    <div class="card">
+        <h2>🌾 Sobre o Agro Forte</h2>
+        <p>O agronegócio é essencial para a economia do Brasil e do Paraná. 
+        Ele gera empregos, produz alimentos e movimenta a economia. 
+        Porém, para ser forte de verdade, precisa ser sustentável, 
+        preservando solo, água e biodiversidade.</p>
+    </div>
+</section>
+
+<section id="tecnologia">
+    <div class="card">
+        <h2>🚜 Tecnologia no Campo</h2>
+        <p>Hoje o agro utiliza drones, sensores de solo, irrigação inteligente 
+        e inteligência artificial para aumentar a produção e reduzir impactos ambientais.</p>
+        <img src="https://images.unsplash.com/photo-1598514982841-57c1e7f7f6e3" width="100%" style="border-radius:10px;">
+    </div>
+</section>
+
+<section id="sustentabilidade">
+    <div class="card">
+        <h2>💧 Sustentabilidade</h2>
+        <p>Práticas como rotação de culturas, plantio direto e uso consciente da água 
+        ajudam a manter o solo fértil e o meio ambiente equilibrado.</p>
+        <img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf" width="100%" style="border-radius:10px;">
+    </div>
+</section>
+
+<section id="ia">
+    <div class="card">
+        <h2>🤖 IA Interativa - Pergunte sobre Agricultura</h2>
+        <input type="text" id="pergunta" placeholder="Digite sua pergunta aqui...">
+        <br>
+        <button onclick="responder()">Perguntar</button>
+        <p id="resposta"></p>
+    </div>
+</section>
+
+<footer>
+    <p>Projeto desenvolvido para o Programa Agrinho - Ensino Médio</p>
+    <p>Aluno: _______________________</p>
+</footer>
+
+<script>
+function responder(){
+    var pergunta = document.getElementById("pergunta").value.toLowerCase();
+    var resposta = document.getElementById("resposta");
+
+    if(pergunta.includes("agua")){
+        resposta.innerHTML = "A economia de água pode ser feita com irrigação por gotejamento e sensores inteligentes.";
+    }
+    else if(pergunta.includes("solo")){
+        resposta.innerHTML = "O plantio direto e a rotação de culturas ajudam a preservar o solo.";
+    }
+    else if(pergunta.includes("tecnologia")){
+        resposta.innerHTML = "Drones, sensores e inteligência artificial ajudam a produzir mais com menos impacto.";
+    }
+    else{
+        resposta.innerHTML = "O Agro Forte une produção eficiente e sustentabilidade para garantir o futuro.";
+    }
+}
+</script>
+
+</body>
+</html>
